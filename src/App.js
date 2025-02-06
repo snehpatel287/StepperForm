@@ -407,7 +407,6 @@ const App = () => {
 
         {showTable && (
           <UserTable
-          
             users={state.users}
             onDelete={(id) => dispatch({ type: "remove", payload: id })}
             onEdit={editUser}
