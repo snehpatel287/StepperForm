@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import tableReducer, { initialState } from "./reducers/tableReducer";
 import UserTable from "./components/Table";
-import UserForm from "./components/UserForm";
+import UserForm from "./components/form/UserForm";
 import StepperComponent from "./components/Stepper";
 
 const App = () => {
@@ -90,7 +90,7 @@ const App = () => {
       bankName: "",
       email: "",
       houseName: "",
-      file: null,
+      file: "",
       selectedDate: null,
     });
     if (fileInputRef.current) {
@@ -195,6 +195,7 @@ const App = () => {
   };
 
   const editUser = (user) => {
+    setEditId(user.id);
     setFormData({
       firstName: user.firstName,
       lastName: user.lastName,
@@ -208,6 +209,7 @@ const App = () => {
       file: user.file ? { name: user.file } : null,
     });
     setButtonText("Clear");
+    setFileError("");
     setShowForm(true);
     setShowTable(false);
   };
@@ -421,5 +423,6 @@ const App = () => {
     </Container>
   );
 };
+
 
 export default App;
