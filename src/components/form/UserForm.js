@@ -30,7 +30,7 @@ const UserForm = ({
   email,
   houseName,
   salary,
-  selectedDate,
+  // selectedDate,
   file,
   editId,
   buttonText,
@@ -50,7 +50,7 @@ const UserForm = ({
   handleSubmit,
   saveEdit,
   handleButtonClick,
-  setselectedDate,
+  // setselectedDate,
   setDateOfBirthError,
 }) => {
   return (
@@ -213,7 +213,7 @@ const UserForm = ({
             variant="contained"
             color="primary"
             style={{ marginRight: "10px" }}
-            onClick={editId ? saveEdit : handleSubmit}
+            onClick={editId ? `saveEdit` : handleSubmit}
           >
             {editId
               ? "Save Changes"
