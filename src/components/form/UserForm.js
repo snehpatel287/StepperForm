@@ -91,7 +91,7 @@ const UserForm = ({
             alignItems: "center",
           }}
         >
-          <label style={{ marginRight: "10px" }}>Gender:</label>
+          <label style={{ marginRight: "10px" }}>Select Gender:</label>
           <FormControlLabel value="male" control={<Radio />} label="Male" />
           <FormControlLabel value="female" control={<Radio />} label="Female" />
         </RadioGroup>
